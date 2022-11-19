@@ -1,14 +1,59 @@
+.app {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #ff7b5c, #ff6c81);
+}
+
+.leftContainer {
+    border: 1px solid lightgrey;
+    box-shadow: 0 0 5px #333;
+    padding: 5vh 5vh 10vh;
+    border-radius: 25px;
+    background-color: white
+}
+
 .form {
     display: flex;
     flex-direction: column;
 }
 
+.header {
+    font-weight: bold;
+    font-size: 1.25em;
+    text-align: center;
+}
+
 .item-form {
     display: flex;
     flex-direction: column;
+    padding-top: 5px;
 }
 
+label {
+    font-weight: bold;
+}
+
+.form-field {
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 33vh;
+}
+
+.button {
+    margin-top: 50px;
+    margin-left: 10vw;
+    border-radius: 10px;
+    width: 12vh;
+    background-color: #ff7b5c;
+    color: white;
+    border: none;
+}
+
+
 #petr {
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: 200px;
 }
