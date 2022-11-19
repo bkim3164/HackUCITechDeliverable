@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './petr.png'
 import "./index.css"
 import { Form } from './Form'
+import MediaQuery from 'react-responsive'
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
         <img id="petr" src={Logo} alt="Petr Logo" />
       </div>
     </div>
+
   );
 }
 

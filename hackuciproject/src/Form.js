@@ -1,7 +1,6 @@
 import React from 'react';
 import { FormItem, FormText } from './FormElement';
 import { useState } from 'react';
-import axios from 'axios';
 
 function Form(props) {
     const [Name, setName] = useState('');
@@ -11,9 +10,14 @@ function Form(props) {
     const handleSubmit = event => {
         alert('Successfully submitted the form!')
         event.preventDefault();
-        axios.get('https://hack-tech-app-endpoint.herokuapp.com/').then(function (response) {
-            console.log(response);
-        })
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+        fetch(`https://hack-tech-app-endpoint.herokuapp.com/test?email=${Email}&funfact=${FunFact}&name=${Name}`, requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result));
 
         setName('')
         setEmail('')

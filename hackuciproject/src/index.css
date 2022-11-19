@@ -1,10 +1,28 @@
-.app {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to right, #ff7b5c, #ff6c81);
+@media screen and (min-width: 1224px) {
+    .app {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(to right, #ff7b5c, #ff6c81);
+    }
 }
+
+@media screen and (max-width: 1224px) {
+    .app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: linear-gradient(#ff7b5c, #ff6c81);
+        height: 100vh
+    }
+
+    .leftContainer {
+        margin-top: 10px;
+    }
+}
+
 
 .leftContainer {
     border: 1px solid lightgrey;
@@ -55,5 +73,22 @@ label {
 
 #petr {
     width: 200px;
-    height: 200px;
+    height: 250px;
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+
+    25% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(20deg)l
+    }
+
+    75% {
+        transform: rotate(20deg)
+    }
+
 }
